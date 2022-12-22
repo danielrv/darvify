@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3731F07C295120B1007A47FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F07B295120B1007A47FD /* AppDelegate.swift */; };
+		3731F07E295120B1007A47FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F07D295120B1007A47FD /* SceneDelegate.swift */; };
+		3731F080295120B1007A47FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F07F295120B1007A47FD /* ViewController.swift */; };
+		3731F083295120B1007A47FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3731F081295120B1007A47FD /* Main.storyboard */; };
+		3731F086295120B1007A47FD /* ee_darv_Darvify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3731F084295120B1007A47FD /* ee_darv_Darvify.xcdatamodeld */; };
+		3731F088295120B2007A47FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3731F087295120B2007A47FD /* Assets.xcassets */; };
+		3731F08B295120B2007A47FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3731F089295120B2007A47FD /* LaunchScreen.storyboard */; };
+		3731F0B0295121C0007A47FD /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0AF295121C0007A47FD /* LoginProvider.swift */; };
+		3731F0B2295122B3007A47FD /* SpotifyLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0B1295122B3007A47FD /* SpotifyLoginProvider.swift */; };
+		3731F0B629512579007A47FD /* Confs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0B529512579007A47FD /* Confs.swift */; };
+		3731F0B9295127D3007A47FD /* LogUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0B8295127D3007A47FD /* LogUtils.swift */; };
+		3731F0BB2951E792007A47FD /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0BA2951E792007A47FD /* UIViewControllerExtensions.swift */; };
+		3788CEE42953A94D006AFC9B /* ServerComms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEE32953A94D006AFC9B /* ServerComms.swift */; };
+		3788CEE72953C928006AFC9B /* Modelos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEE62953C928006AFC9B /* Modelos.swift */; };
+		3788CEE92953DB89006AFC9B /* ImageCacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEE82953DB89006AFC9B /* ImageCacheUtils.swift */; };
+		3788CEEB2954895D006AFC9B /* NewReleaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEEA2954895D006AFC9B /* NewReleaseDetailViewController.swift */; };
+		3788CEED29548C0F006AFC9B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEEC29548C0F006AFC9B /* UIImageExtension.swift */; };
+		3788CEEF2954977D006AFC9B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEEE2954977D006AFC9B /* UIViewExtensions.swift */; };
+		3788CEF129549C1F006AFC9B /* ArtistaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEF029549C1F006AFC9B /* ArtistaTableViewCell.swift */; };
+		3788CEF32954A13A006AFC9B /* DetalleArtistaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEF22954A13A006AFC9B /* DetalleArtistaViewController.swift */; };
+		3788CEF52954C2BD006AFC9B /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEF42954C2BD006AFC9B /* IntExtensions.swift */; };
+		3788CEF82954C8A5006AFC9B /* GenerosTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEF72954C8A5006AFC9B /* GenerosTabViewController.swift */; };
+		3788CEFB2954CD63006AFC9B /* GeneroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEFA2954CD63006AFC9B /* GeneroTableViewCell.swift */; };
+		379908EF29538C1200032E28 /* HomeTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379908EE29538C1200032E28 /* HomeTabbarViewController.swift */; };
+		379908F32953A2B100032E28 /* NewReleasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379908F22953A2B100032E28 /* NewReleasesViewController.swift */; };
+		379908F62953A3C400032E28 /* NewReleasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379908F52953A3C400032E28 /* NewReleasesTableViewCell.swift */; };
+		3799CC602954DEB1004A61F9 /* ee_darv_DarvifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799CC5F2954DEB1004A61F9 /* ee_darv_DarvifyTests.swift */; };
+		3799CC662954DF6D004A61F9 /* ServerComms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEE32953A94D006AFC9B /* ServerComms.swift */; };
+		3799CC672954DF84004A61F9 /* LogUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0B8295127D3007A47FD /* LogUtils.swift */; };
+		3799CC682954DF8E004A61F9 /* Modelos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788CEE62953C928006AFC9B /* Modelos.swift */; };
+		3799CC692954DF98004A61F9 /* Confs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0B529512579007A47FD /* Confs.swift */; };
+		3799CC6A2954E699004A61F9 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0AF295121C0007A47FD /* LoginProvider.swift */; };
+		3799CC6B2954E69C004A61F9 /* SpotifyLoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0B1295122B3007A47FD /* SpotifyLoginProvider.swift */; };
+		3799CC6C2954E708004A61F9 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3731F0BA2951E792007A47FD /* UIViewControllerExtensions.swift */; };
+		3799CC742954EAC7004A61F9 /* ee_darv_DarvifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799CC732954EAC7004A61F9 /* ee_darv_DarvifyUITests.swift */; };
+		3799CC762954EAC7004A61F9 /* ee_darv_DarvifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3799CC752954EAC7004A61F9 /* ee_darv_DarvifyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3799CC612954DEB1004A61F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3731F070295120B1007A47FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3731F077295120B1007A47FD;
+			remoteInfo = ee.darv.Darvify;
+		};
+		3799CC772954EAC7004A61F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3731F070295120B1007A47FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3731F077295120B1007A47FD;
+			remoteInfo = ee.darv.Darvify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3731F078295120B1007A47FD /* ee.darv.Darvify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ee.darv.Darvify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3731F07B295120B1007A47FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3731F07D295120B1007A47FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3731F07F295120B1007A47FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3731F082295120B1007A47FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3731F085295120B1007A47FD /* ee_darv_Darvify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ee_darv_Darvify.xcdatamodel; sourceTree = "<group>"; };
+		3731F087295120B2007A47FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3731F08A295120B2007A47FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3731F08C295120B2007A47FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3731F0AF295121C0007A47FD /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		3731F0B1295122B3007A47FD /* SpotifyLoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyLoginProvider.swift; sourceTree = "<group>"; };
+		3731F0B529512579007A47FD /* Confs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confs.swift; sourceTree = "<group>"; };
+		3731F0B8295127D3007A47FD /* LogUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtils.swift; sourceTree = "<group>"; };
+		3731F0BA2951E792007A47FD /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		3788CEE32953A94D006AFC9B /* ServerComms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerComms.swift; sourceTree = "<group>"; };
+		3788CEE62953C928006AFC9B /* Modelos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelos.swift; sourceTree = "<group>"; };
+		3788CEE82953DB89006AFC9B /* ImageCacheUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheUtils.swift; sourceTree = "<group>"; };
+		3788CEEA2954895D006AFC9B /* NewReleaseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseDetailViewController.swift; sourceTree = "<group>"; };
+		3788CEEC29548C0F006AFC9B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		3788CEEE2954977D006AFC9B /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		3788CEF029549C1F006AFC9B /* ArtistaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistaTableViewCell.swift; sourceTree = "<group>"; };
+		3788CEF22954A13A006AFC9B /* DetalleArtistaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleArtistaViewController.swift; sourceTree = "<group>"; };
+		3788CEF42954C2BD006AFC9B /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		3788CEF72954C8A5006AFC9B /* GenerosTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerosTabViewController.swift; sourceTree = "<group>"; };
+		3788CEFA2954CD63006AFC9B /* GeneroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneroTableViewCell.swift; sourceTree = "<group>"; };
+		379908EE29538C1200032E28 /* HomeTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabbarViewController.swift; sourceTree = "<group>"; };
+		379908F22953A2B100032E28 /* NewReleasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesViewController.swift; sourceTree = "<group>"; };
+		379908F52953A3C400032E28 /* NewReleasesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesTableViewCell.swift; sourceTree = "<group>"; };
+		3799CC5D2954DEB1004A61F9 /* ee.darv.DarvifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ee.darv.DarvifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3799CC5F2954DEB1004A61F9 /* ee_darv_DarvifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ee_darv_DarvifyTests.swift; sourceTree = "<group>"; };
+		3799CC712954EAC7004A61F9 /* ee.darv.DarvifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ee.darv.DarvifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3799CC732954EAC7004A61F9 /* ee_darv_DarvifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ee_darv_DarvifyUITests.swift; sourceTree = "<group>"; };
+		3799CC752954EAC7004A61F9 /* ee_darv_DarvifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ee_darv_DarvifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3731F075295120B1007A47FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3799CC5A2954DEB1004A61F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3799CC6E2954EAC7004A61F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3731F06F295120B1007A47FD = {
+			isa = PBXGroup;
+			children = (
+				3731F07A295120B1007A47FD /* ee.darv.Darvify */,
+				3799CC5E2954DEB1004A61F9 /* ee.darv.DarvifyTests */,
+				3799CC722954EAC7004A61F9 /* ee.darv.DarvifyUITests */,
+				3731F079295120B1007A47FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3731F079295120B1007A47FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3731F078295120B1007A47FD /* ee.darv.Darvify.app */,
+				3799CC5D2954DEB1004A61F9 /* ee.darv.DarvifyTests.xctest */,
+				3799CC712954EAC7004A61F9 /* ee.darv.DarvifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3731F07A295120B1007A47FD /* ee.darv.Darvify */ = {
+			isa = PBXGroup;
+			children = (
+				3788CEE22953A92B006AFC9B /* ServerComms */,
+				379908ED29538BD600032E28 /* App */,
+				3731F0B7295127B4007A47FD /* Utils */,
+				3731F0B429512562007A47FD /* Confs */,
+				3731F0AE2951214B007A47FD /* Login */,
+				3731F07B295120B1007A47FD /* AppDelegate.swift */,
+				3731F07D295120B1007A47FD /* SceneDelegate.swift */,
+				3731F07F295120B1007A47FD /* ViewController.swift */,
+				3731F081295120B1007A47FD /* Main.storyboard */,
+				3731F087295120B2007A47FD /* Assets.xcassets */,
+				3731F089295120B2007A47FD /* LaunchScreen.storyboard */,
+				3731F08C295120B2007A47FD /* Info.plist */,
+				3731F084295120B1007A47FD /* ee_darv_Darvify.xcdatamodeld */,
+			);
+			path = ee.darv.Darvify;
+			sourceTree = "<group>";
+		};
+		3731F0AE2951214B007A47FD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3731F0AF295121C0007A47FD /* LoginProvider.swift */,
+				3731F0B1295122B3007A47FD /* SpotifyLoginProvider.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3731F0B429512562007A47FD /* Confs */ = {
+			isa = PBXGroup;
+			children = (
+				3731F0B529512579007A47FD /* Confs.swift */,
+			);
+			path = Confs;
+			sourceTree = "<group>";
+		};
+		3731F0B7295127B4007A47FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3731F0B8295127D3007A47FD /* LogUtils.swift */,
+				3731F0BA2951E792007A47FD /* UIViewControllerExtensions.swift */,
+				3788CEEC29548C0F006AFC9B /* UIImageExtension.swift */,
+				3788CEEE2954977D006AFC9B /* UIViewExtensions.swift */,
+				3788CEF42954C2BD006AFC9B /* IntExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3788CEE22953A92B006AFC9B /* ServerComms */ = {
+			isa = PBXGroup;
+			children = (
+				3788CEE32953A94D006AFC9B /* ServerComms.swift */,
+				3788CEE62953C928006AFC9B /* Modelos.swift */,
+				3788CEE82953DB89006AFC9B /* ImageCacheUtils.swift */,
+			);
+			path = ServerComms;
+			sourceTree = "<group>";
+		};
+		3788CEF62954C88C006AFC9B /* Generos */ = {
+			isa = PBXGroup;
+			children = (
+				3788CEF72954C8A5006AFC9B /* GenerosTabViewController.swift */,
+				3788CEFA2954CD63006AFC9B /* GeneroTableViewCell.swift */,
+			);
+			path = Generos;
+			sourceTree = "<group>";
+		};
+		379908ED29538BD600032E28 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				379908EE29538C1200032E28 /* HomeTabbarViewController.swift */,
+				3788CEF62954C88C006AFC9B /* Generos */,
+				379908F12953A29900032E28 /* NewReleases */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		379908F12953A29900032E28 /* NewReleases */ = {
+			isa = PBXGroup;
+			children = (
+				379908F22953A2B100032E28 /* NewReleasesViewController.swift */,
+				379908F52953A3C400032E28 /* NewReleasesTableViewCell.swift */,
+				3788CEEA2954895D006AFC9B /* NewReleaseDetailViewController.swift */,
+				3788CEF029549C1F006AFC9B /* ArtistaTableViewCell.swift */,
+				3788CEF22954A13A006AFC9B /* DetalleArtistaViewController.swift */,
+			);
+			path = NewReleases;
+			sourceTree = "<group>";
+		};
+		3799CC5E2954DEB1004A61F9 /* ee.darv.DarvifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				3799CC5F2954DEB1004A61F9 /* ee_darv_DarvifyTests.swift */,
+			);
+			path = ee.darv.DarvifyTests;
+			sourceTree = "<group>";
+		};
+		3799CC722954EAC7004A61F9 /* ee.darv.DarvifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3799CC732954EAC7004A61F9 /* ee_darv_DarvifyUITests.swift */,
+				3799CC752954EAC7004A61F9 /* ee_darv_DarvifyUITestsLaunchTests.swift */,
+			);
+			path = ee.darv.DarvifyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3731F077295120B1007A47FD /* ee.darv.Darvify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3731F0A5295120B2007A47FD /* Build configuration list for PBXNativeTarget "ee.darv.Darvify" */;
+			buildPhases = (
+				3731F074295120B1007A47FD /* Sources */,
+				3731F075295120B1007A47FD /* Frameworks */,
+				3731F076295120B1007A47FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ee.darv.Darvify;
+			productName = ee.darv.Darvify;
+			productReference = 3731F078295120B1007A47FD /* ee.darv.Darvify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3799CC5C2954DEB1004A61F9 /* ee.darv.DarvifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3799CC632954DEB1004A61F9 /* Build configuration list for PBXNativeTarget "ee.darv.DarvifyTests" */;
+			buildPhases = (
+				3799CC592954DEB1004A61F9 /* Sources */,
+				3799CC5A2954DEB1004A61F9 /* Frameworks */,
+				3799CC5B2954DEB1004A61F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3799CC622954DEB1004A61F9 /* PBXTargetDependency */,
+			);
+			name = ee.darv.DarvifyTests;
+			productName = ee.darv.DarvifyTests;
+			productReference = 3799CC5D2954DEB1004A61F9 /* ee.darv.DarvifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3799CC702954EAC7004A61F9 /* ee.darv.DarvifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3799CC792954EAC7004A61F9 /* Build configuration list for PBXNativeTarget "ee.darv.DarvifyUITests" */;
+			buildPhases = (
+				3799CC6D2954EAC7004A61F9 /* Sources */,
+				3799CC6E2954EAC7004A61F9 /* Frameworks */,
+				3799CC6F2954EAC7004A61F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3799CC782954EAC7004A61F9 /* PBXTargetDependency */,
+			);
+			name = ee.darv.DarvifyUITests;
+			productName = ee.darv.DarvifyUITests;
+			productReference = 3799CC712954EAC7004A61F9 /* ee.darv.DarvifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3731F070295120B1007A47FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					3731F077295120B1007A47FD = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					3799CC5C2954DEB1004A61F9 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 3731F077295120B1007A47FD;
+					};
+					3799CC702954EAC7004A61F9 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 3731F077295120B1007A47FD;
+					};
+				};
+			};
+			buildConfigurationList = 3731F073295120B1007A47FD /* Build configuration list for PBXProject "ee.darv.Darvify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3731F06F295120B1007A47FD;
+			productRefGroup = 3731F079295120B1007A47FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3731F077295120B1007A47FD /* ee.darv.Darvify */,
+				3799CC5C2954DEB1004A61F9 /* ee.darv.DarvifyTests */,
+				3799CC702954EAC7004A61F9 /* ee.darv.DarvifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3731F076295120B1007A47FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3731F08B295120B2007A47FD /* LaunchScreen.storyboard in Resources */,
+				3731F088295120B2007A47FD /* Assets.xcassets in Resources */,
+				3731F083295120B1007A47FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3799CC5B2954DEB1004A61F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3799CC6F2954EAC7004A61F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3731F074295120B1007A47FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3788CEF52954C2BD006AFC9B /* IntExtensions.swift in Sources */,
+				3731F080295120B1007A47FD /* ViewController.swift in Sources */,
+				3788CEE92953DB89006AFC9B /* ImageCacheUtils.swift in Sources */,
+				3788CEED29548C0F006AFC9B /* UIImageExtension.swift in Sources */,
+				3788CEF82954C8A5006AFC9B /* GenerosTabViewController.swift in Sources */,
+				3788CEFB2954CD63006AFC9B /* GeneroTableViewCell.swift in Sources */,
+				3731F0B629512579007A47FD /* Confs.swift in Sources */,
+				3731F0B2295122B3007A47FD /* SpotifyLoginProvider.swift in Sources */,
+				3788CEF129549C1F006AFC9B /* ArtistaTableViewCell.swift in Sources */,
+				3731F0B0295121C0007A47FD /* LoginProvider.swift in Sources */,
+				3731F0BB2951E792007A47FD /* UIViewControllerExtensions.swift in Sources */,
+				3731F0B9295127D3007A47FD /* LogUtils.swift in Sources */,
+				3788CEE42953A94D006AFC9B /* ServerComms.swift in Sources */,
+				379908F32953A2B100032E28 /* NewReleasesViewController.swift in Sources */,
+				3731F07C295120B1007A47FD /* AppDelegate.swift in Sources */,
+				3788CEE72953C928006AFC9B /* Modelos.swift in Sources */,
+				3731F086295120B1007A47FD /* ee_darv_Darvify.xcdatamodeld in Sources */,
+				3788CEEB2954895D006AFC9B /* NewReleaseDetailViewController.swift in Sources */,
+				3731F07E295120B1007A47FD /* SceneDelegate.swift in Sources */,
+				379908F62953A3C400032E28 /* NewReleasesTableViewCell.swift in Sources */,
+				3788CEEF2954977D006AFC9B /* UIViewExtensions.swift in Sources */,
+				379908EF29538C1200032E28 /* HomeTabbarViewController.swift in Sources */,
+				3788CEF32954A13A006AFC9B /* DetalleArtistaViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3799CC592954DEB1004A61F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3799CC6C2954E708004A61F9 /* UIViewControllerExtensions.swift in Sources */,
+				3799CC692954DF98004A61F9 /* Confs.swift in Sources */,
+				3799CC6B2954E69C004A61F9 /* SpotifyLoginProvider.swift in Sources */,
+				3799CC672954DF84004A61F9 /* LogUtils.swift in Sources */,
+				3799CC662954DF6D004A61F9 /* ServerComms.swift in Sources */,
+				3799CC602954DEB1004A61F9 /* ee_darv_DarvifyTests.swift in Sources */,
+				3799CC6A2954E699004A61F9 /* LoginProvider.swift in Sources */,
+				3799CC682954DF8E004A61F9 /* Modelos.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3799CC6D2954EAC7004A61F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3799CC742954EAC7004A61F9 /* ee_darv_DarvifyUITests.swift in Sources */,
+				3799CC762954EAC7004A61F9 /* ee_darv_DarvifyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3799CC622954DEB1004A61F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3731F077295120B1007A47FD /* ee.darv.Darvify */;
+			targetProxy = 3799CC612954DEB1004A61F9 /* PBXContainerItemProxy */;
+		};
+		3799CC782954EAC7004A61F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3731F077295120B1007A47FD /* ee.darv.Darvify */;
+			targetProxy = 3799CC772954EAC7004A61F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3731F081295120B1007A47FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3731F082295120B1007A47FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3731F089295120B2007A47FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3731F08A295120B2007A47FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3731F0A3295120B2007A47FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3731F0A4295120B2007A47FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3731F0A6295120B2007A47FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 653MBL596Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ee.darv.Darvify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.darv.ee-darv-Darvify";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3731F0A7295120B2007A47FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 653MBL596Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ee.darv.Darvify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.darv.ee-darv-Darvify";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3799CC642954DEB1004A61F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 653MBL596Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.darv.ee-darv-DarvifyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ee.darv.Darvify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ee.darv.Darvify";
+			};
+			name = Debug;
+		};
+		3799CC652954DEB1004A61F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 653MBL596Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.darv.ee-darv-DarvifyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ee.darv.Darvify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ee.darv.Darvify";
+			};
+			name = Release;
+		};
+		3799CC7A2954EAC7004A61F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 653MBL596Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.darv.ee-darv-DarvifyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ee.darv.Darvify;
+			};
+			name = Debug;
+		};
+		3799CC7B2954EAC7004A61F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 653MBL596Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.darv.ee-darv-DarvifyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ee.darv.Darvify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3731F073295120B1007A47FD /* Build configuration list for PBXProject "ee.darv.Darvify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3731F0A3295120B2007A47FD /* Debug */,
+				3731F0A4295120B2007A47FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3731F0A5295120B2007A47FD /* Build configuration list for PBXNativeTarget "ee.darv.Darvify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3731F0A6295120B2007A47FD /* Debug */,
+				3731F0A7295120B2007A47FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3799CC632954DEB1004A61F9 /* Build configuration list for PBXNativeTarget "ee.darv.DarvifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3799CC642954DEB1004A61F9 /* Debug */,
+				3799CC652954DEB1004A61F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3799CC792954EAC7004A61F9 /* Build configuration list for PBXNativeTarget "ee.darv.DarvifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3799CC7A2954EAC7004A61F9 /* Debug */,
+				3799CC7B2954EAC7004A61F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3731F084295120B1007A47FD /* ee_darv_Darvify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3731F085295120B1007A47FD /* ee_darv_Darvify.xcdatamodel */,
+			);
+			currentVersion = 3731F085295120B1007A47FD /* ee_darv_Darvify.xcdatamodel */;
+			path = ee_darv_Darvify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3731F070295120B1007A47FD /* Project object */;
+}

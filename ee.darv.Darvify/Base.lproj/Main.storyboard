@@ -166,6 +166,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="TGd-Ux-EyY" id="Pzm-4w-XvO"/>
                                     <outlet property="delegate" destination="TGd-Ux-EyY" id="H1z-lm-dUY"/>
+                                    <outlet property="prefetchDataSource" destination="TGd-Ux-EyY" id="wzV-co-RXc"/>
                                 </connections>
                             </tableView>
                         </subviews>

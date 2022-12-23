@@ -139,7 +139,7 @@ public class ServerComms: NSObject {
             self.Log(level: .basic, str: "POST a \(endpoint)")
             self.Log(level: .basic, str: "Error en POST \(err)")
             let httpResp = response as? HTTPURLResponse
-            print(httpResp?.statusCode)
+            
             if (httpResp?.statusCode == 200 && err == nil && data != nil){
                 do {
                     
@@ -159,37 +159,7 @@ public class ServerComms: NSObject {
             }
         }
         task.resume()
-        /*
-         let request = NSMutableURLRequest(url: NSURL(string: Confs.shared.spotifyTokenURL)! as URL,cachePolicy: .useProtocolCachePolicy,timeoutInterval: 30.0)
-         request.httpMethod = "POST"
-         request.allHTTPHeaderFields = headers
-         request.httpBody = postData as Data
-
-         let session = URLSession.shared
-         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-             if (error != nil) {
-                 //hacer algo elegante para manejar el error ... o...
-                 abort()
-
-             } else {
-                 let httpResponse = response as? HTTPURLResponse
-                 if(httpResponse?.statusCode == 200){
-                     let strJson = String.init(data: data!, encoding: .utf8)
-                     do{
-                         let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any?]
-                         let accToken = json["access_token"] as! String
-                         let refToken = json["refresh_token"] as! String
-                         completion(accToken,refToken)
-                     }catch{
-                         abort()
-                     }
-                 }
-             }
-             
-         })
-
-         dataTask.resume()
-         */
+        
     }
     
     

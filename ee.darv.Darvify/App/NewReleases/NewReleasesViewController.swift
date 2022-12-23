@@ -7,7 +7,9 @@
 
 import UIKit
 
-class NewReleasesViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class NewReleasesViewController: UIViewController,UITableViewDataSource, UITableViewDelegate, UITableViewDataSourcePrefetching {
+    
+    
     var actualizarRefreshControl:UIRefreshControl!
     @IBOutlet var tablaNewReleases:UITableView?
     
@@ -16,6 +18,7 @@ class NewReleasesViewController: UIViewController,UITableViewDataSource, UITable
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tablaNewReleases?.isPrefetchingEnabled = true
         actualizarRefreshControl = UIRefreshControl()
         self.tablaNewReleases!.addSubview(actualizarRefreshControl)
         actualizarRefreshControl.attributedTitle = NSAttributedString(string: "Actualizar")
@@ -98,4 +101,27 @@ class NewReleasesViewController: UIViewController,UITableViewDataSource, UITable
         self.present(newReleaseDetailVC, animated: true)
         
     }
+    
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print("Prefetching! [\(indexPaths)]")
+        for indexPath in indexPaths {
+            let item = self.listaItems[indexPath.row]
+            let imageUrlString = item.images[0].url
+            
+            DispatchQueue.global(qos: .default).async {
+                let urlImage = URL(string: imageUrlString)
+                guard let urlImagen = urlImage else{
+                    return
+                }
+              
+                ImageCacheUtils.shared.imagenParaUrl(url: urlImagen) { _ in
+                    
+                    
+                }
+            }
+        }
+        
+    }
+    
+   
 }

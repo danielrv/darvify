@@ -8,6 +8,10 @@
 import Foundation
 
 
+public struct Credentials:Codable{
+    var access_token:String
+    var refresh_token:String
+}
 public struct GenerosDiponibles:Codable {
     var genres:[String]
 }

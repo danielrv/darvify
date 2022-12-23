@@ -112,4 +112,86 @@ public class ServerComms: NSObject {
     }
     
     
+    /// Funcion obtener Modelos con datos desde URL
+    /// Obtiene el JSON desde una URL y crea el modelo solicitado
+    /// ```
+    /// func obtenerDatosPOST<T>(endpoint:String,body:Data, headers:[HeaderParameter], solicitar:T.Type, finalizo: @escaping(_ objeto:T?, _ err:Error?) ->())
+    /// ```
+    /// - Parameters:
+    ///     - endpoint: String con la ruta del JSON
+    ///     - body: Data con el cuerpo del request POST
+    ///     - headers: arreglo de HeaderParameter , que van en la cabecera del request
+    ///     - solicitar: El tipo de objecto que se solicita, debe ser un modelo y estar implementado
+    ///     - finalizo: closue (objeto:T?, err:Error?) , si no hay error el objeto sera del tipo solicitado, si hay error el objeto sera nil y err tendrá un Error
+    func obtenerDatosPOST<T>(endpoint:String,body:Data, headers:[HeaderParameter], solicitar:T.Type, finalizo: @escaping(_ objeto:T?, _ err:CustomError?) ->()){
+      
+        let url = URL(string:endpoint)
+        let request:NSMutableURLRequest = NSMutableURLRequest()
+        request.url = url
+        request.httpMethod = "POST"
+        for header in headers {
+            request.addValue(header.value, forHTTPHeaderField: header.key)
+        }
+
+        request.httpBody = body
+        let session:URLSession = URLSession.shared
+        let task = session.dataTask(with: request as URLRequest) {  (data, response, err) in
+            self.Log(level: .basic, str: "POST a \(endpoint)")
+            self.Log(level: .basic, str: "Error en POST \(err)")
+            let httpResp = response as? HTTPURLResponse
+            print(httpResp?.statusCode)
+            if (httpResp?.statusCode == 200 && err == nil && data != nil){
+                do {
+                    
+                    if(solicitar == Credentials.self){
+                        let credentials = try JSONDecoder().decode(Credentials.self, from: data!)
+                        finalizo(credentials as? T ,nil)
+                    }
+
+                    
+                }catch{
+                   
+                    finalizo(nil, CustomError.otros)
+                }
+            }else{
+                
+                finalizo(nil,CustomError.distintoA200)
+            }
+        }
+        task.resume()
+        /*
+         let request = NSMutableURLRequest(url: NSURL(string: Confs.shared.spotifyTokenURL)! as URL,cachePolicy: .useProtocolCachePolicy,timeoutInterval: 30.0)
+         request.httpMethod = "POST"
+         request.allHTTPHeaderFields = headers
+         request.httpBody = postData as Data
+
+         let session = URLSession.shared
+         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+             if (error != nil) {
+                 //hacer algo elegante para manejar el error ... o...
+                 abort()
+
+             } else {
+                 let httpResponse = response as? HTTPURLResponse
+                 if(httpResponse?.statusCode == 200){
+                     let strJson = String.init(data: data!, encoding: .utf8)
+                     do{
+                         let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any?]
+                         let accToken = json["access_token"] as! String
+                         let refToken = json["refresh_token"] as! String
+                         completion(accToken,refToken)
+                     }catch{
+                         abort()
+                     }
+                 }
+             }
+             
+         })
+
+         dataTask.resume()
+         */
+    }
+    
+    
+    
 }

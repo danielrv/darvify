@@ -62,39 +62,30 @@ class SpotifyLoginProvider: NSObject, LoginProvider {
     }
     
     func requestToken(code:String,redirect:String,verifier:String, completion:@escaping(_ aToken:String, _ rToken:String) ->Void){
-        let headers = ["Content-Type": "application/x-www-form-urlencoded"]
-
+        
+        let header = HeaderParameter(key: "Content-Type", value: "application/x-www-form-urlencoded")
         let postData = NSMutableData(data: "grant_type=authorization_code&client_id=\(Confs.shared.clientID)&code_verifier=\(verifier)&code=\(code)&redirect_uri=\(redirect)".data(using: String.Encoding.utf8)!) as Data
 
-        let request = NSMutableURLRequest(url: NSURL(string: Confs.shared.spotifyTokenURL)! as URL,cachePolicy: .useProtocolCachePolicy,timeoutInterval: 30.0)
-        request.httpMethod = "POST"
-        request.allHTTPHeaderFields = headers
-        request.httpBody = postData as Data
-
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                //hacer algo elegante para manejar el error ... o...
-                abort()
-
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                if(httpResponse?.statusCode == 200){
-                    let strJson = String.init(data: data!, encoding: .utf8)
-                    do{
-                        let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any?]
-                        let accToken = json["access_token"] as! String
-                        let refToken = json["refresh_token"] as! String
-                        completion(accToken,refToken)
-                    }catch{
-                        abort()
-                    }
-                }
-            }
+        guard let _ = NSURL(string: Confs.shared.spotifyTokenURL) else{
+            self.Log(level: .basic, str: "Error en String spotifyTokenURL")
+            return
             
-        })
-
-        dataTask.resume()
+        }
+        let serverComms = ServerComms()
+        serverComms.obtenerDatosPOST(endpoint: Confs.shared.spotifyTokenURL, body: postData, headers: [header], solicitar: Credentials.self) { objeto, err in
+            
+            if (err == nil){
+                if let credentials = objeto{
+                    completion(credentials.access_token, credentials.refresh_token)
+                }else{
+                    self.Log(level: .basic, str: "Error en Credentials!")
+                }
+            }else{
+                self.Log(level: .basic, str: "Error al obtener Credentials! \(err)")
+            }
+        }
+        
+        
     }
     
     

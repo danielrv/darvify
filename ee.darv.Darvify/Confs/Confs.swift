@@ -12,7 +12,7 @@ class Confs: NSObject {
     static let shared = Confs()
     
     //Log
-    var logLevel            = LogLevel.none
+    var logLevel            = LogLevel.unsafe
     
     //Endpoints
     var spotifyAuthURL      = "DEBES INGRESAR UNA URL PARA SPOTIFY AUTH"

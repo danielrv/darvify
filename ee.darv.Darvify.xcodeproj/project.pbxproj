@@ -195,6 +195,7 @@
 		3788CEE22953A92B006AFC9B /* ServerComms */ = {
 			isa = PBXGroup;
 			children = (
+				37E72F8F2955D3BC00680622 /* Headers */,
 				3788CEE32953A94D006AFC9B /* ServerComms.swift */,
 				3788CEE62953C928006AFC9B /* Modelos.swift */,
 				3788CEE82953DB89006AFC9B /* ImageCacheUtils.swift */,
@@ -248,6 +249,13 @@
 				3799CC752954EAC7004A61F9 /* ee_darv_DarvifyUITestsLaunchTests.swift */,
 			);
 			path = ee.darv.DarvifyUITests;
+			sourceTree = "<group>";
+		};
+		37E72F8F2955D3BC00680622 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -67,7 +67,7 @@ class SpotifyLoginProvider: NSObject, LoginProvider {
         let postData = NSMutableData(data: "grant_type=authorization_code&client_id=\(Confs.shared.clientID)&code_verifier=\(verifier)&code=\(code)&redirect_uri=\(redirect)".data(using: String.Encoding.utf8)!) as Data
 
         guard let _ = NSURL(string: Confs.shared.spotifyTokenURL) else{
-            self.Log(level: .basic, str: "Error en String spotifyTokenURL")
+            print("Error en String spotifyTokenURL")
             return
             
         }
@@ -78,10 +78,10 @@ class SpotifyLoginProvider: NSObject, LoginProvider {
                 if let credentials = objeto{
                     completion(credentials.access_token, credentials.refresh_token)
                 }else{
-                    self.Log(level: .basic, str: "Error en Credentials!")
+                    print("Error en Credentials!")
                 }
             }else{
-                self.Log(level: .basic, str: "Error al obtener Credentials! \(err)")
+                print("Error al obtener Credentials! \(err)")
             }
         }
         
@@ -136,7 +136,6 @@ class SpotifyLoginProvider: NSObject, LoginProvider {
                completion(false,"","")
                 return
             }
-            self.Log(level: .basic, str: "ASWebAuthenticationSession.CompletionHandler")
             
             let code = self.getQueryStringParameter(url: successURL.absoluteString, param: "code")
             guard let code = code else {

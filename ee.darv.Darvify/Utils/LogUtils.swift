@@ -20,7 +20,7 @@ extension NSObject{
     /// ```
     /// func Log(level:LogLevel, str:String)
     /// ```
-    /// > Warining: en versiones anteriores de Swift requiere usar self.Log(...) en closures
+    /// > Warining: No usar en closures
     ///
     /// - Parameters:
     ///     - level: LogLevel ( .basic | .unsafe) del mensaje, unsafe es para contenidos que no deberían mostrarse en depuración

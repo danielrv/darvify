@@ -50,7 +50,7 @@ class ImageCacheUtils: NSObject {
                     serverComm.obtenerImagen(endpoint: url.absoluteString) { dato, err in
                         if(err == nil && dato != nil){
                             do{
-                                self.Log(level: .unsafe, str: "Guardando Imagen en \(imagenEnDisco)")
+                                
                                 try dato?.write(to: imagenEnDisco, options: .atomic)
                                 
                                 if let imagenRet = UIImage.init(data: dato!){
@@ -58,7 +58,7 @@ class ImageCacheUtils: NSObject {
                                     finalizar(imagenRet)
                                 }
                             }catch{
-                                self.Log(level: .basic, str: "Error guardar imagen -> \(error)")
+                               print(error)
                             }
                             
                         }
@@ -66,7 +66,7 @@ class ImageCacheUtils: NSObject {
                 }
                 
             }catch{
-                self.Log(level: .basic, str: "Error imagenParaUrl -> \(error)")
+                
             }
         }
         

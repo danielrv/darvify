@@ -39,7 +39,7 @@ class NewReleasesViewController: UIViewController,UITableViewDataSource, UITable
         let serverComm = ServerComms()
         serverComm.obtenerDatosGET(endpoint: Confs.shared.newReleasesURL, headers: [contentType,authorization], solicitar: NewReleases.self) { objeto, err in
             if(err != nil){
-                self.Log(level: .basic, str: "🚫 \(err!)")
+               
                 if( err == .distintoA200){
                     self.mostrarAlerta(titulo: "Ops!", texto: "Parece que hay problemas con la conexión o con tu token\nRecuerda usar un token de desarrollo y tener conexión a internet")
                 }
@@ -103,7 +103,7 @@ class NewReleasesViewController: UIViewController,UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        print("Prefetching! [\(indexPaths)]")
+ 
         for indexPath in indexPaths {
             let item = self.listaItems[indexPath.row]
             let imageUrlString = item.images[0].url

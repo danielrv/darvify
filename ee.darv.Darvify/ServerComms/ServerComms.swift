@@ -34,19 +34,17 @@ public class ServerComms: NSObject {
         
         let session:URLSession = URLSession.shared
         let task = session.dataTask(with: request as URLRequest) {  (data, response, err) in
-            self.Log(level: .basic, str: "GET a \(endpoint)")
+            
             let httpResp = response as? HTTPURLResponse
 
             if (httpResp?.statusCode == 200 && err == nil && data != nil){
     
-                self.Log(level: .basic, str: "Imagen Descargada OK!")
+               
                 finalizo(data,err)
                 
             }else{
                 finalizo(nil, CustomError.errObtenerImagen)
-                if let err = err{
-                    self.Log(level: .basic, str: "🚫 \(err)")
-                }
+                
                 
             }
         }
@@ -74,8 +72,7 @@ public class ServerComms: NSObject {
         }
         let session:URLSession = URLSession.shared
         let task = session.dataTask(with: request as URLRequest) {  (data, response, err) in
-            self.Log(level: .basic, str: "GET a \(endpoint)")
-            self.Log(level: .basic, str: "Error en GET \(err)")
+            
             let httpResp = response as? HTTPURLResponse
 
             if (httpResp?.statusCode == 200 && err == nil && data != nil){
@@ -136,8 +133,7 @@ public class ServerComms: NSObject {
         request.httpBody = body
         let session:URLSession = URLSession.shared
         let task = session.dataTask(with: request as URLRequest) {  (data, response, err) in
-            self.Log(level: .basic, str: "POST a \(endpoint)")
-            self.Log(level: .basic, str: "Error en POST \(err)")
+           
             let httpResp = response as? HTTPURLResponse
             
             if (httpResp?.statusCode == 200 && err == nil && data != nil){
